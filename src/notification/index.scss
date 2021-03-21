@@ -1,0 +1,71 @@
+$transitionEffect : .4s all ease-in-out;
+
+.notification-container{
+
+    position : fixed;
+    background : none;
+    transition: $transitionEffect;
+    top:0;
+    right:0;
+    width: max-content;
+    height: max-content;
+
+    &.open {
+        transform: translateX(0%);
+    }
+    
+    &.close {
+        transform: translateX(100%);
+    }
+
+    .notification-bg { 
+        width: 260px;
+        height : max-content;
+        background : #fff;
+        box-shadow: 1px 1px 4px 0.5px #E8E8E8;
+        transition: $transitionEffect;  
+        margin-right: 20px;
+        margin-top: 20px;
+        border-radius: 5px;
+
+        .notification-header{
+            height : max-content;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 15px;
+            padding-left: 10px;
+
+            img{
+                width:35px;
+                height:35px;
+                cursor: pointer;
+            }
+        }
+
+        .notification-body{
+            padding : 10px 15px 20px;
+
+            .notification-content{
+                display: flex;
+                align-items: flex-start;
+
+                p{
+                    margin:0;
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-family: 'Encode Sans';
+
+                    &.true{
+                        color : green;
+                    }
+
+                    &.false{
+                        color : red;
+                    }
+                }
+            }
+        }
+    }
+
+}

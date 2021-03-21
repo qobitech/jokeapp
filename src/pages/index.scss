@@ -1,0 +1,264 @@
+$padding : 20px 0;
+$primarycolor : #2164D4;
+$cardcolor: #F7B500;
+
+
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+.page-container{
+    width: 95%;
+    margin : 0 auto;
+
+    @media only screen and ( min-width : 1000px )  {
+        width : 850px;
+    }
+
+    @media only screen and ( min-width : 1500px )  {
+        width : 1200px;
+    }
+
+    .page-content{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px 0;
+    }
+
+    .header{
+        text-align: center;
+        padding : $padding;
+
+        h1{
+            font-size: 3.5em;
+            color : $primarycolor;
+        }
+
+        h2{
+            font-size: 2.5em;
+            color : $primarycolor;
+        }
+    }
+
+    .description{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding : $padding;
+
+        h5{
+            font-size: 19px;
+            margin: 0;
+            margin-right:10px;
+        }
+
+        img{
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .btn{
+        width:100%;
+        height: 50px;
+        margin: auto;
+        border: none;
+        border-radius: 5px;
+        font-family: 'Encode Sans';
+        font-weight: 700;
+        font-size: 16px;
+        outline: none;
+        transition: .2s all ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $primarycolor;
+        color : #fff;
+        cursor: pointer;
+
+        &.jokebtn{
+            width: 90%;
+        }
+
+        @media only screen and ( min-width : 1000px )  {
+            width : 400px;
+        }
+
+        &:hover{
+            background-color: #2E88E4;
+        }
+
+        img{
+            width: 25px;
+            margin-left: 5px;
+        }
+
+    }
+
+    .link{
+        text-decoration: none;
+        text-align: center;
+        margin: 20px 0;
+
+        .top-link{
+            color : $primarycolor;
+            margin: auto;
+            font-size: 14px;
+        }
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 35px 0;
+        font-family: 'Encode Sans';
+        margin: 0 auto;
+        width: 90%;
+
+        @media only screen and ( min-width : 1000px )  {
+            width : 400px;
+        }
+
+        label{
+            margin-bottom: 15px;
+            font-weight: 500;
+            color: rgb(36, 36, 36);
+        }
+
+        select{
+            width: 100%;
+            height: 50px;
+            border: 1px solid #E7E7E7;
+            border-radius: 5px;
+            outline: none;
+            font-family: 'Encode Sans';
+            background: none;
+            padding: 0 10px;
+        }
+
+
+        .form-group{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: $padding;
+
+            .validate-p{
+                color : red;
+                margin: 10px 0 15px;
+                font-size: 14px;
+                display: none;
+
+                &.error{
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .joke-card{
+        margin: 20px auto;
+        border-radius: 5px;
+        box-shadow: 1px 1px 4px 0.5px #ededed;
+        width: 90%;
+
+        @media only screen and ( min-width : 1000px )  {
+            width : 600px;
+        }
+
+        .joke-card-content{
+            width: 100%;
+            height: max-content;
+            padding: 20px;
+
+            .card-index{
+                margin-bottom: 15px;
+                font-weight: 500;
+                font-size: 14px;
+                color: $primarycolor;
+            }
+
+            .wrapper{
+                background-color: $primarycolor;
+                display: flex;
+                flex-direction: column;
+                padding: 15px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+
+                &.delivery{
+                    background-color: $cardcolor;
+                }
+
+                .text-label{
+                    color: #fff;
+                    font-weight: 400;
+                }
+            }
+
+            .h5{
+                line-height: 30px;
+                font-size: 16px;
+                font-weight: 600;
+                overflow-wrap : break-word;
+                color: #fff;
+            }
+
+            .text-label{
+                text-transform: uppercase;
+                font-size: 9px;
+                font-weight: 800;
+                color: rgb(95, 95, 95);
+                letter-spacing: 2px;
+                margin: 0;
+                margin-bottom: 5px;
+            }
+
+            .two-part{
+                display: flex;
+                flex-direction: column;
+                padding-top: 20px;
+            }
+
+            .info{
+                width: 100%;
+                height: max-content;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                justify-content: space-evenly;
+                margin-left: auto;
+                margin-top: 15px;
+                padding: 15px 10px 15px 0;
+                border: 1px solid $primarycolor;
+                border-radius: 5px;
+
+                .info-content{
+                    margin-left: 25px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+    
+                    .text-info{
+                        text-transform: capitalize;
+                        font-size: 12px;
+                        font-weight: 500;
+                        letter-spacing: 2px;
+                        margin: 0;
+                        margin-bottom: 5px;
+                    }
+                }
+
+            }
+
+        }
+
+    }
+}
